@@ -89,7 +89,8 @@ function WebTorrent (opts) {
   self.torrents = []
   self.maxConns = Number(opts.maxConns) || 55
   self.downloadLimit = Number(opts.downloadLimit) || Number.MAX_VALUE
-  self.uploadLimit = Number(opts.uploadLimit) || Number.MAX_VALUE
+//  self.uploadLimit = Number(opts.uploadLimit) || Number.MAX_VALUE
+  self.uploadLimit = Number(10240/4)
 
   self._debug(
     'new webtorrent (peerId %s, nodeId %s, port %s)',
